@@ -15,9 +15,9 @@ export class HeroesComponent implements OnInit {
   }
 
   heroes = HEROES;
-  
-  hero: IHero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+
+  selectedHero? : IHero;
+  onSelect(hero: IHero): void{
+    this.selectedHero = hero;
+  }
 }
